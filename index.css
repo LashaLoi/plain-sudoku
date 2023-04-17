@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=fallback");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --size: 40px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 140px;
+  height: 40px;
+
+  font-size: 1.2rem;
+
+  background: none;
+  border: 1px solid #dfdfec;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background: #dfdfec;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.actions {
+  font-size: 1.4rem;
+
+  gap: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-top: 30px;
+
+  width: calc(9 * var(--size) + 18px);
+}
+
+.numbers {
+  font-size: 1.5rem;
+
+  margin: 10px auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(9 * var(--size) + 18px);
+}
+
+.number {
+  width: var(--size);
+  height: var(--size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.number:hover {
+  background: #f9f8f8;
+}
+
+.board {
+  padding: 0;
+
+  margin: 20px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: calc(9 * var(--size) + 18px);
+}
+
+.item {
+  width: var(--size);
+  height: var(--size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: background 0.09s ease-in-out;
+
+  border: 1px solid #eee;
+}
+
+.item.active {
+  background: #dfdfec;
+}
+
+.item:nth-child(3),
+.item:nth-child(6),
+.item:nth-child(12),
+.item:nth-child(15),
+.item:nth-child(21),
+.item:nth-child(24),
+.item:nth-child(30),
+.item:nth-child(33),
+.item:nth-child(39),
+.item:nth-child(42),
+.item:nth-child(48),
+.item:nth-child(51),
+.item:nth-child(57),
+.item:nth-child(60),
+.item:nth-child(66),
+.item:nth-child(69),
+.item:nth-child(75),
+.item:nth-child(78) {
+  border-right-color: #000;
+}
+
+.item:nth-child(1),
+.item:nth-child(10),
+.item:nth-child(19),
+.item:nth-child(28),
+.item:nth-child(37),
+.item:nth-child(46),
+.item:nth-child(55),
+.item:nth-child(64),
+.item:nth-child(73) {
+  border-left-color: #000;
+}
+
+.item:nth-child(9),
+.item:nth-child(18),
+.item:nth-child(27),
+.item:nth-child(36),
+.item:nth-child(45),
+.item:nth-child(54),
+.item:nth-child(63),
+.item:nth-child(72),
+.item:nth-child(81) {
+  border-right-color: #000;
+}
+
+.item:nth-child(19),
+.item:nth-child(20),
+.item:nth-child(21),
+.item:nth-child(22),
+.item:nth-child(23),
+.item:nth-child(24),
+.item:nth-child(25),
+.item:nth-child(26),
+.item:nth-child(27) {
+  border-bottom-color: #000;
+}
+
+.item:nth-child(46),
+.item:nth-child(47),
+.item:nth-child(48),
+.item:nth-child(49),
+.item:nth-child(50),
+.item:nth-child(51),
+.item:nth-child(52),
+.item:nth-child(53),
+.item:nth-child(54) {
+  border-bottom-color: #000;
+}
+
+.item:not(:nth-child(n + 10)) {
+  border-top-color: #000;
+}
+
+.item:nth-child(n + 73) {
+  border-bottom-color: #000;
+}
